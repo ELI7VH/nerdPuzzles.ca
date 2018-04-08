@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Supermercado+One');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+:root {
+
+    --main-font: 'Supermercado One', cursive;
+    --secondary-font: 'PT Mono', monospace;
+    --logo-font: 'Russo One', sans-serif;
+    --color-dark: #080f0f;
+    --color-white: #eff2c0;
+    --color-grey: #bea57d;
+    --color-accent-dark: #a52422;
+    --color-accent-light: #a4bab7;
+    }
+
+html, body{
+    font-family: var(--secondary-font);
+    background: var(--color-dark);
+    text-align: center;
+    color:#666;
+    margin:0;
+    padding:0;
+    font-size: 65%;
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent-light);
+    text-decoration: underline;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+
+}
+
+a:active {
+    color: var(--color-accent-light)
+}
+
+.logo {
+    margin: 3% auto;
+}
+
+.logo a{
+    font-family: var(--logo-font);
+    font-size: 8rem;
+    color:var(--color-accent-dark);
+    /* text-shadow: var(--color-accent-light) -1px -1px 0px; */
+    transition: all 0.5s ease;
+}
+
+.logo a:hover{
+    text-decoration: none;
+    color:var(--color-dark);
+    /* text-shadow: var(--color-accent-dark) -1px -1px 0px; */
+    transition: all 2.2s ease;
+}
+
+.header {
+    font-family:var(--logo-font);
+    margin:0 auto;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    color:var(--color-dark) ;
+}
+
+.bigass{
+    font-size: 5rem;
+    padding:2% 0;
+}
+
+.miniheader {
+    font-size:4rem;
+    padding:2% 0;
+}
+
+.challenge-name {
+    font-family:var(--logo-font);
+    font-size:6rem;
+    color: var(--color-dark);
+    text-shadow: var(--color-accent-light) -1px -1px 0px;
+    padding: 2% 0 0;
+}
+
+.light {
+    color: var(--color-white);
+    margin:1% auto 0
+}
+
+
+div {
+    width: 100%;
+}
+
+.slacker {
+    color: var(--color-grey);
+}
+
+.top-half {
+    background:var(--color-white);
+}
+
+.middle-half {
+    background:var(--color-dark);
+
+}
+
+.bottom-half {
+
+}
+
+.accent {
+    color: var(--color-accent-light)
+}
+
+.winner {
+    font-size: 3rem;
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -3px -3px 0px var(--color-white);
+}
+
+.description{
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    border: var(--color-white) solid 1px;
+    border-width: 0px 2px;
+    color: var(--color-white);
+    width: 60%;
+    padding: 2% 6%;
+    margin: 2% auto 3%;
+    text-align: left;
+    border-radius: 15px;
+    line-height: 1.4em;
+}
+
+.note {
+    margin:2% auto 1%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.progress {
+    font-size:2rem;
+    width:60%;
+    margin:2% auto;
+    text-align: left;
+    color:var(--color-grey);
+    padding:2%;
+    border: 1px solid var(--color-grey);
+}
+
+.student-header {
+    font-size: 3rem;
+    color:var(--color-accent-light);
+    /* font-weight: 100; */
+}
+
+.name {
+    color:var(--color-white);
+}
+
+.after-name {
+    color:var(--color-accent-dark);
+}
+
+.progress-check {
+    float:right;
+    font-family: var(--main-font);
+    color: var(--color-accent-light);
+}
+
+.project-list {
+    margin:2% auto;
+}
+
+.menu {
+    margin:2% auto;
+}
+
+.menu a, .button{
+    font-family: var(--logo-font);
+    letter-spacing: 4px;
+    border: var(--color-accent-dark) 0px solid;
+    border-width: 0px 1px 1px 0px;
+    color: var(--color-accent-dark);
+    font-size: 2rem;
+    padding:1% 4%;
+    width:25%;
+    margin:0;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.menu a:hover, .button:hover{
+    background: var(--color-accent-dark);
+    color: var(--color-dark);
+    text-shadow: var(--color-accent-light) 1px 1px 0px;
+    border: var(--color-accent-light) solid;
+    border-width: 1px 0 0 1px;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 900px) {
+
+  :root {
+      --color-dark: #080f0f;
+      --color-white: #eff2c0;
+      --color-grey: #bea57d;
+      --color-accent-dark: #a52422;
+      --color-accent-light: #a4bab7;
+  }
+
+  html, body{
+    background: var(--color-white) !important;
+  }
+
+  .menu a, .button{
+    display: block;
+    border: 1px var(--color-grey) solid;
+    color: var(--color-grey);
+    text-shadow:0;
+    width:80%;
+    margin: 1% auto;
+  }
+
+  .menu a:hover, .button:hover{
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    border: 1px var(--color-grey) solid;
+    text-shadow:var(--color-dark);
+  }
+
+  .bigass{
+    font-size:5em;
+  }
+
+  .challenge-name{
+    color:var(--color-accent-dark);
+    text-shadow: none;
+    font-size: 4rem;
+  }
+
+  .description, .middle-half{
+    width:90%;
+    padding: 5% 5%;
+    margin: 0;
+    background: var(--color-white);
+    color: var(--color-dark);
+  }
+
+
+
+    .description{
+    font-size: 1.5rem;
+      border: 1px var(--color-accent-dark) solid;
+    }
+
+    .logo a{
+      font-size:4rem;
+      color: var(--color-accent-light);
+    }
+    .logo a:hover{
+      color: var(--color-white);
+    }
+
+    .name{
+
+      color: var(--color-grey);
+    }
+
+    .winner {
+        font-size: 2rem;
+        background: 0;
+        text-shadow: -3px -3px 0px var(--color-accent-dark);
+    }
+
+    .progress {
+        font-size: 1.5rem;
+        width: 80%;
+        padding: 0 5%;
+        margin: 10% auto;
+    }
+
+}

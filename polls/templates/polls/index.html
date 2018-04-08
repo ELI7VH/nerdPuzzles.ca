@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>nerdPuzzles.ca {{ current_challenge.challenge_name}}</title>
+    </head>
+    <body>
+        <div class="logo">
+            <a href="/">nerdPuzzles.ca</a>
+          <div class="header challenge-name">Week {{current_challenge.week_number}} - {{ current_challenge.challenge_name}}</div>
+        </div>
+        <div class="menu">
+          <a href="/">Current Challenge</a>
+          {% for item in menu %}
+            <a href="/{{item}}">{{item}}</a>
+          {% endfor%}
+        </div>
+        <div class="bottom-half">
+        </div>
+        <div class="middle-half">
+            <div class="description">{{ current_challenge.challenge_description | linebreaksbr }} <br />
+                <div class="note">Create a brand new repl.it here: <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a></div>
+                <div class="note">Don't forget to name your repl as simply "week{{project_number}}" and make sure the name is lowercase.</div>
+
+            </div>
+        </div>
+        <div class="bottom-half">
+
+            {% if student_list %}
+            {% for student in student_list %}
+        <div class="progress">
+            <span class="name">{{ student.student_name }}</span><span class="after-name">'s progress: </span><!--{{student.completed_weeks}} / 52 weeks -->
+                    {% if student.completed_weeks >= current_challenge.week_number %}
+                    <span class="progress-check winner">DONE!</span>
+                    {% elif student.current_week_in_progress == True %}
+                        <span class="progress-check working">...Working On It...</span>
+                    {% else %}
+                        <span class="progress-check slacker">SLACKING!</span>
+                    {% endif %}
+                    {{ p }}
+                    {% for i in  p %}
+                    <div class="project_link">
+                        <p>{{ i }}</p>asdf
+                    </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            {% else %}
+                <div class="progress">No Students Registered!</div>
+            {% endif %}
+                <div class="note">Django App written by Elijah Lucian 2018</div>
+        </div>
+    </body>
+</html>

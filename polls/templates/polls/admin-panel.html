@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+        <title>nerdPuzzles.ca - Sort Of Admin Panel!</title>
+    </head>
+
+    <body>
+        <div class="logo">
+            <a href="/">nerdPuzzles.ca</a>
+            <div class="header challenge-name">$ sudo apt-get update</div>
+        </div>
+        </div>
+        <div class="menu">
+          <a href="/">Current Challenge</a>
+          {% for item in menu %}
+            <a href="/{{item}}">{{item}}</a>
+          {% endfor%}
+        </div>
+        <div class="bottom-half">
+          <div class="description">When you upload your project, click the update all users button to refresh the list!</div>
+
+          <a href="/update" class="button"> Update All Users </a>
+          &nbsp;
+          <a href="/reset" class="button"> Reset All User Progress </a>
+
+          <div class="note">Django App written by Elijah Lucian 2018</div>
+        </div>
+
+    </body>
+</html>

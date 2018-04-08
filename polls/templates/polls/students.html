@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+    <title>nerdPuzzles.ca - Students And Their Creations!</title>
+  </head>
+  <body>
+      <div class="logo">
+            <a href="/">nerdPuzzles.ca</a>
+          <div class="header challenge-name">for student in class_list:</div></div>
+      </div>
+    <!-- <div class="top-half">
+      <div class="header bigass">{{ text }}</div>
+    </div> -->
+    <div class="menu">
+      <a href="/">Current Challenge</a>
+      {% for item in menu %}
+        <a href="/{{item}}">{{item}}</a>
+      {% endfor%}
+    </div>
+    <div class="bottom-half">
+      <div class="description">Here is a list of all the students with their currently completed projects!</div>
+      {% for student in student_list %}
+      <div class="progress">
+        <div class="student-header">@{{ student.student_name }}</div>
+        {% for project in student.project_list %}
+        {% if project == "none" %}
+        <div class="project-list">{{ project }}</div>
+        {% else %}
+        <div class="project-list"><a href={{ project }} target="_blank">{{ project }}</a></div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+      <a href="/" class="button"> Back To Current Challenge </a>
+    <div class="note">Django App written by Elijah Lucian 2018</div>
+    </div>
+  </body>
+</html>

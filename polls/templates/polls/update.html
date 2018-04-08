@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+        <title>nerdPuzzles.ca - Your Princess Is In Another Castle!</title>
+    </head>
+
+    <body>
+        <div class="logo">
+            <a href="/">nerdPuzzles.ca</a>
+            <div class="header challenge-name">{{text}}</div>
+        </div>
+        <!-- <div class="top-half">
+            <div class="header bigass">{{ text }}</div>
+
+        </div> -->
+        <div class="menu">
+          <a href="/">Current Challenge</a>
+          {% for item in menu %}
+            <a href="/{{item}}">{{item}}</a>
+          {% endfor%}
+        </div>
+        <div class="bottom-half">
+            <div class="note">Django App written by Elijah Lucian 2018</div>
+        </div>
+
+    </body>
+</html>

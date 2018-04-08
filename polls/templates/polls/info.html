@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+        <title>nerdPuzzles.ca - Info</title>
+    </head>
+
+    <body>
+        <div class="logo">
+            <a href="/">nerdPuzzles.ca</a>
+        <div class="header challenge-name">$ cat /home/pi/nerdPuzzles/description.txt</div>
+        </div>
+        <!-- <div class="top-half">
+            <div class="header bigass">{{ text }}</div>
+        </div> -->
+        <div class="menu">
+          <a href="/">Current Challenge</a>
+          {% for item in menu %}
+            <a href="/{{item}}">{{item}}</a>
+          {% endfor%}
+        </div>
+        <div class="bottom-half">
+            <div class="description">
+                <p><span class="accent">> greeting = ["hello future programmer" for i in range(42)]</span></p>
+                <p>Does the above line scare you?</p>
+                <p>Do you wish you were more familiar with programming?</p>
+                <p>What we are doing is learning programming with the language, <span class="accent">Python</span>! The goal of this community is that <span class="accent">within a year</span>, you will learn how to program to a point where all your wildest ideas will be possible! even things like <span class="accent">this website!</span></p>
+                <p>We are using a book called “<span class="accent">Automate The Boring Stuff With Python</span>” to learn, it also has a video series that accompanies it, which you will get access to when you join the group.</p>
+                <p>On top of that, there is another giant ass folder with <span class="accent">tons of learning resources</span>, if you are feeling really gung-ho about it!</p>
+                <p>Joining the group is free, we just ask that you do <span class="accent">at least 1 challenge a week, and stay for the year!</span> (1-2 hours weekly) if you are a late joiner, you will have to do some crunching on the basics... </p>
+                <p>The one cool quirk about this club is that the entire class does not progress until everybody does the weekly challenge! <span class="accent">Nobody gets left behind!</span></p>
+                <p>We have a facebook group where any questions about programming, or your ideas can be asked. It works as <span class="accent">an amazing support system for newcomers</span></p>
+                <p>If you want to join, let us know and i can add your repl username to this challenge site (the website is soon to be fully automated -- <span class="accent">with Python!</span>)</p>
+            </div>
+
+                <div class="note">Django App written by Elijah Lucian 2018</div>
+        </div>
+
+    </body>
+</html>
