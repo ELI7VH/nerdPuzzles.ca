@@ -5,6 +5,8 @@ django
 
 ### install instructions
 ```
+git clone http://github.com/eli7vh/nerdPuzzles.ca
+cd nerdPuzzles.ca
 virtualenv -p python3 env
 source env/bin/activate
 pip install django
